@@ -6,6 +6,11 @@
 		this.activeDate;
 		this.selectedDates = [new Date().setHours(0, 0, 0, 0)];
 		this.type = 'individual';
+
+		this.isOpen = false;
+		this.open = function () {
+			this.isOpen = true;
+		}
 		
 		this.removeFromSelected = function(dt) {
 			this.selectedDates.splice(this.selectedDates.indexOf(dt), 1);
